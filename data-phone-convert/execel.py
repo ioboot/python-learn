@@ -48,7 +48,8 @@ with codecs.open('D:/workspace/python/20210107-471180-SR-UTF8.txt', 'w', 'utf-8'
             continue
         arry = data[i][1:10]
         # 交换末尾数据
-        arry[len(arry)-1], arry[len(arry) - 2] = arry[len(arry) - 2], arry[len(arry)-1]
+        arry[len(arry)-1], arry[len(arry) -
+                                2] = arry[len(arry) - 2], arry[len(arry)-1]
         # 合并中间数据
         arry[3] = arry[3] + ' ' + arry[4]
         str_row = '"'+str(i)+'",'  # 追加索引
