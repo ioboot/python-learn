@@ -2,8 +2,11 @@
 import pandas
 import codecs
 
+source_file = 'D:/workspace/python/python-learn/data-phone-convert/data_phone_20210304_pro.xlsx'
+dest_file = 'D:/workspace/python/python-learn/data-phone-convert/20210304-473270-SR-UTF8.txt'
+
 df = pandas.read_excel(
-    'D:/workspace/python/data_phone_20210107_pro.xlsx', dtype=object)
+    source_file, dtype=object)
 
 # # 读取行列数据及索引
 # print(len(df.index.values))  # 行数 不包含表头
@@ -42,7 +45,7 @@ df = pandas.read_excel(
 
 data = pandas.np.array(df).tolist()
 
-with codecs.open('D:/workspace/python/20210107-471180-SR-UTF8.txt', 'w', 'utf-8') as f:
+with codecs.open(dest_file, 'w', 'utf-8') as f:
     for i in range(len(data)):
         if i < 1:
             continue
